@@ -6,6 +6,11 @@
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
         <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&family=Jacquard+24&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body style="margin: 0; overflow: hidden;">
@@ -28,7 +33,14 @@
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerA"
             >
-            <a-text gesture-handler color="blue"  position="-0.5 0.8 0" rotation="-90 0 0" value=count></a-text>
+      <a-entity class="animate__animated animate__bounce">
+                <a-text
+                    value="Me pergunte e responderei"
+                    position="-0.68 0.3 -0.5"
+                    rotation="-90 0 0"
+                    color="black"
+                ></a-text>
+            </a-entity>
                 <!-- <a-image
                     src="assets/asset.gif"
                     scale="1 1 1"
@@ -37,7 +49,6 @@
                     gesture-handler
                 ></a-image> -->
                 <a-entity rotation="-90 0 0" geometry="primitive:plane;" material="shader:gif;src:url(assets/dogs.gif);"></a-entity>
-
             </a-marker>
 
             <a-entity camera></a-entity>
