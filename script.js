@@ -21,4 +21,4 @@ function onClick() {
 
 // Call the onClick function when a click event occurs
 document.addEventListener('click', onClick);
-
+document.addEventListener('touchstart', onClick);
